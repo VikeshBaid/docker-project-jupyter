@@ -16,4 +16,14 @@ Next set I set up a work directory where all the notebooks will be save
 
 Work directory: mkdir /opt/notebook
 
-For docker file: 
+For docker file: WORKDIR /opt/notebook
+
+Next step is to expose port on which the jupyter server runs
+
+Code : using -p flag 8888:8888 (host_port):(container_port)
+
+For docker file: EXPOSE 8888
+
+Next step is to run the server on container
+
+Code: /bin/bash -c "/opt
