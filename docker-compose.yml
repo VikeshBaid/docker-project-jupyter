@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  jupyteros:
+    build: .
+    volumes:
+      - .:/opt/notebooks
+    ports:
+      - 8888:8888
+
