@@ -20,7 +20,7 @@ Next, I set up a __work directory__ where all the notebooks will be save
 
 Next step is to __expose__ port on which the jupyter server runs
 
-**Exposing Port:** using `-p flag 8888:8888 (host_port):(container_port)`
+**Exposing Port:** using `-p  8888:8888` ((host_port):(container_port))
 
 **For docker file:** `EXPOSE 8888`
 
