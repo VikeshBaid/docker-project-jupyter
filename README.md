@@ -20,7 +20,7 @@ Next, I set up a __work directory__ where all the notebooks will be save
 
 Next step is to __expose__ port on which the jupyter server runs
 
-**Exposing Port:** using `-p  8888:8888` ((host_port):(container_port))
+**Exposing Port:** using `-p  8888:8888` (host_port:container_port)
 
 **For docker file:** `EXPOSE 8888`
 
@@ -46,8 +46,10 @@ You can easily download docker compose from Google
 
 In my __docker-compse.yml__ scrpit:
 
-1. I used `version: 3` of __docker compose__, there is a description about all the version of docker compose at (https://docs.docker.com/compose/compose-file/compose-versioning)
+1. I used `version: 3` of __docker compose__, there is a description about all the version of docker compose at https://docs.docker.com/compose/compose-file/compose-versioning
 2. Every container you create is known as service in docker. I created a service `jupyteros`. It has a **volume** in which I attach `/opt/notebook`.
 3. I also specify **port** `8888:8888` where docker container is exposed to outside world.
-4. Then, I used `build` keyword which is used to build the docker using Dockerfile. Both docker-compose.yml and Dockerfile should be present in same folder, if not you must explicitly mention the pathe path of Dockerfile to docker-compose. 
+4. Then, I used `build` keyword which is used to build the docker using Dockerfile. 
+
+Both docker-compose.yml and Dockerfile should be present in same folder, if not you must explicitly mention the pathe path of Dockerfile to docker-compose. 
 
